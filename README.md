@@ -1,6 +1,12 @@
 # login_register
 
-A new Flutter project.
+Basic Flutter Sample App
+
+Contains: 
+Login
+Register
+Verify Email
+Home Page
 
 ## Getting Started
 
