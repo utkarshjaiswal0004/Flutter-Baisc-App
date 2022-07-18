@@ -23,6 +23,8 @@ void main() {
       routes: {
         '/login/': (context) => const LoginView(),
         '/register/': (context) => const RegisterView(),
+        '/homeScreen/': (context) => const HomeScreen(),
+        '/verifyEmail/': (context) => const VerifyEmailView(),
       },
     ),
   );

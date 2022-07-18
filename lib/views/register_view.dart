@@ -62,7 +62,11 @@ class _RegisterViewState extends State<RegisterView> {
                   email: email,
                   password: password,
                 );
-                devtools.log(userCredential.toString());
+                if (!mounted) return;
+                Navigator.of(context).pushNamedAndRemoveUntil(
+                  '/verifyEmail/',
+                  (route) => false,
+                );
               } on FirebaseAuthException catch (e) {
                 if (e.code == 'weak-password') {
                   devtools.log('Weak Password');
