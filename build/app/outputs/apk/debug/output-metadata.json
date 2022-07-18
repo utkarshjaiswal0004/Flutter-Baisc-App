@@ -13,7 +13,7 @@
       "attributes": [],
       "versionCode": 1,
       "versionName": "1.0.0",
-      "outputFile": "Login_Register-debug.apk"
+      "outputFile": "app-debug.apk"
     }
   ],
   "elementType": "File"

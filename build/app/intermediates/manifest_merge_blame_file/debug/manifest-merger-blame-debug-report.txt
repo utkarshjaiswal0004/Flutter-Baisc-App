@@ -34,7 +34,7 @@
 23-->[androidx.core:core:1.6.0] /Users/utkarshjaiswal/.gradle/caches/transforms-3/b11c0e2c212c747cb4bcf29314469768/transformed/core-1.6.0/AndroidManifest.xml:24:18-86
 24        android:debuggable="true"
 25        android:icon="@mipmap/ic_launcher"
-26        android:label="Login Register" >
+26        android:label="Test Login Register" >
 27        <activity
 28            android:name="com.example.login_register.MainActivity"
 29            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
