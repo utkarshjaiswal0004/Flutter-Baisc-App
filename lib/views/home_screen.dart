@@ -1,5 +1,4 @@
 // ignore_for_file: deprecated_member_use
-import 'dart:developer' as devtools show log;
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'dart:math';
@@ -39,6 +38,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     final shouldLogout = await showLogOutDialog(context);
                     if (shouldLogout) {
                       await FirebaseAuth.instance.signOut();
+                      if (!mounted) break;
                       Navigator.of(context).pushNamedAndRemoveUntil(
                         '/login/',
                         (_) => false,
