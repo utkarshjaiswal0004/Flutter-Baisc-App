@@ -2,6 +2,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'dart:math';
+
+import 'package:login_register/constants/routes.dart';
 // import 'dart:developer' as devtools show log;
 
 enum MenuAction { logout }
@@ -40,7 +42,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       await FirebaseAuth.instance.signOut();
                       if (!mounted) break;
                       Navigator.of(context).pushNamedAndRemoveUntil(
-                        '/login/',
+                        loginRoute,
                         (_) => false,
                       );
                     }
