@@ -1,9 +1,7 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'dart:developer' as devtools show log;
-
 import 'package:login_register/constants/routes.dart';
-
+import 'package:login_register/services/auth/auth_exceptions.dart';
+import 'package:login_register/services/auth/auth_service.dart';
 import '../utilities/show_error_dialog.dart';
 
 class VerifyEmailView extends StatefulWidget {
@@ -30,19 +28,21 @@ class _VerifyEmailViewState extends State<VerifyEmailView> {
             TextButton(
               onPressed: () async {
                 try {
-                  final user = FirebaseAuth.instance.currentUser;
-                  await user?.sendEmailVerification();
-                } catch (e) {
+                  AuthService.firebase().currentUser;
+                  await AuthService.firebase().sendEmailVerification();
+                } on GenericAuthException {
                   await showErrorDialog(
                     context,
-                    e.toString(),
+                    "Some Error Occured",
                   );
                 }
               },
               child: const Text('Resend Verification Email'),
             ),
             TextButton(
-              onPressed: () {
+              onPressed: () async {
+                await AuthService.firebase().logOut();
+                if (!mounted) return;
                 Navigator.of(context)
                     .pushNamedAndRemoveUntil(loginRoute, (route) => false);
               },
