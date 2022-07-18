@@ -4,6 +4,8 @@ import 'dart:developer' as devtools show log;
 
 import 'package:login_register/constants/routes.dart';
 
+import '../utilities/show_error_dialog.dart';
+
 class VerifyEmailView extends StatefulWidget {
   const VerifyEmailView({Key? key}) : super(key: key);
 
@@ -21,16 +23,20 @@ class _VerifyEmailViewState extends State<VerifyEmailView> {
       body: Center(
         child: Column(
           children: [
-            const Text('Please Verify Your Email Address '),
+            const Text(
+                "We've send you a verification email, please open the link in it to verify your email. (Check spam too)"),
+            const Text(
+                "If you haven't received any mail, click the button below"),
             TextButton(
               onPressed: () async {
                 try {
                   final user = FirebaseAuth.instance.currentUser;
                   await user?.sendEmailVerification();
-                  devtools.log('Inside email send code');
                 } catch (e) {
-                  devtools.log('Error occured with code');
-                  devtools.log(e.toString());
+                  await showErrorDialog(
+                    context,
+                    e.toString(),
+                  );
                 }
               },
               child: const Text('Resend Verification Email'),

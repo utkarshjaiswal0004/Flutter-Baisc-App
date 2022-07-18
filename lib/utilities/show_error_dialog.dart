@@ -9,7 +9,7 @@ Future<void> showErrorDialog(
     builder: (context) {
       return AlertDialog(
         title: const Text('An Error Occurred'),
-        content: const Text('Are you sure you want to signout?'),
+        content: Text(text),
         actions: [
           TextButton(
             onPressed: () {
