@@ -2,6 +2,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:login_register/homescreen.dart';
 import 'package:login_register/views/login_view.dart';
 import 'package:login_register/views/register_view.dart';
 import 'package:login_register/views/verify_email_view.dart';
@@ -45,8 +46,10 @@ class HomePage extends StatelessWidget {
                 if (user.emailVerified) {
                   print('Email is verified');
                 } else {
+                  print('Please Verify your mail Id');
                   return const VerifyEmailView();
                 }
+                return const HomeScreen();
               } else {
                 return const LoginView();
               }
