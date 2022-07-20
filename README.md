@@ -3,24 +3,24 @@
 Basic Flutter Sample App
 
 Contains: 
-Login
-Register
-Verify Email
-Home Page
+Login,
+Register,
+Verify Email,
+Home Page,
 
-Signup
-Email verification
+Signup,
+Email verification,
 
-All sort of error handling
-Unit testing
-Random image selection
+All sort of error handling,
+Unit testing,
+Random image selection,
 
-LogOut
+LogOut,
 
-State management 
-Authentication
-Services
-Auth handler
+State management ,
+Authentication,
+Services,
+Auth handler,
 
 (UI, animation and CRUD will be added by 27th july IST)
 ## Getting Started
