@@ -1,26 +1,22 @@
 # login_register
 
-Basic Flutter Sample App
+Flutter Sample  App
 
 Contains: 
-Login,
-Register,
-Verify Email,
-Home Page,
-
-Signup,
-Email verification,
-
-All sort of error handling,
-Unit testing,
-Random image selection,
-
-LogOut,
-
-State management ,
-Authentication,
-Services,
-Auth handler,
+ Login,
+ Register,
+ Verify Email,
+ Home Page,
+ Signup,
+ Email verification,
+ All sort of error handling,
+ Unit testing,
+ Random image selection,
+ LogOut,
+ State management ,
+ Authentication,
+ Services,
+ Auth handler,
 
 (UI, animation and CRUD will be added by 27th july IST)
 ## Getting Started
